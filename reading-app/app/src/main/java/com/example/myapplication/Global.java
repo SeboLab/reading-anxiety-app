@@ -51,6 +51,7 @@ public class Global{
         story = value;
     }
 
+    //which stories were selected from either dropdown/raspberry pi
     public String[] getStoryselected() {
 
         return storyselected;
@@ -61,6 +62,7 @@ public class Global{
         storyselected = value;
     }
 
+    // getting/setting our condition
     public Integer getMode() {
 
         return mode;
@@ -71,6 +73,7 @@ public class Global{
         mode = value;
     }
 
+    //getting the words for each page! (Words2 and Words3 are meant for pages 2 and 3)
     public int getWords() {
 
         return words;
@@ -124,42 +127,6 @@ public class Global{
         // takes in a story number from the dropdown on our condition selection page and loads the words
         // associated with the story (is seperated into title, first, second and third page
         switch (firststory) {
-            case "0":
-                Global.startStory(context, R.string.A, R.string.A1, R.string.A2, R.string.A3);
-                break;
-            case "1":
-                Global.startStory(context, R.string.B, R.string.B1, R.string.B2, R.string.B3);
-                break;
-            case "2":
-                Global.startStory(context, R.string.C, R.string.C1, R.string.C2, R.string.C3);
-                break;
-            case "3":
-                Global.startStory(context, R.string.D, R.string.D1, R.string.D2, R.string.D3);
-                break;
-            case "4":
-                Global.startStory(context, R.string.E, R.string.E1, R.string.E2, R.string.E3);
-                break;
-            case "5":
-                Global.startStory(context, R.string.F, R.string.F1, R.string.F2, R.string.F3);
-                break;
-            case "6":
-                Global.startStory(context, R.string.G, R.string.G1, R.string.G2, R.string.G3);
-                break;
-            case "7":
-                Global.startStory(context, R.string.H, R.string.H1, R.string.H2, R.string.H3);
-                break;
-            case "8":
-                Global.startStory(context, R.string.I, R.string.I1, R.string.I2, R.string.I3);
-                break;
-            case "9":
-                Global.startStory(context, R.string.J, R.string.J1, R.string.J2, R.string.J3);
-                break;
-            case "10":
-                Global.startStory(context, R.string.K, R.string.K1, R.string.K2, R.string.K3);
-                break;
-            case "11":
-                Global.startStory(context, R.string.L, R.string.L1, R.string.L2, R.string.L3);
-                break;
             case "12":
                 Global.startStory(context, R.string.M, R.string.M1, R.string.M2, R.string.M3);
                 break;
@@ -175,51 +142,12 @@ public class Global{
             case "16":
                 Global.startStory(context, R.string.Q, R.string.Q1, R.string.Q2, R.string.Q3);
                 break;
-            case "17":
-                Global.startStory(context, R.string.R, R.string.R1, R.string.R2, R.string.R3);
-                break;
         }
     }
 
     public static void startHumanCondition(Context context, String firststory) {
         // same as function above. there's probably a better way to implement this but found this brute force way to get it working fast
         switch (firststory) {
-            case "Sponges":
-                Global.startStory(context, R.string.A, R.string.A1, R.string.A2, R.string.A3);
-                break;
-            case "Why We Need Water":
-                Global.startStory(context, R.string.B, R.string.B1, R.string.B2, R.string.B3);
-                break;
-            case "Trees":
-                Global.startStory(context, R.string.C, R.string.C1, R.string.C2, R.string.C3);
-                break;
-            case "The Raft":
-                Global.startStory(context, R.string.D, R.string.D1, R.string.D2, R.string.D3);
-                break;
-            case "Honesty":
-                Global.startStory(context, R.string.E, R.string.E1, R.string.E2, R.string.E3);
-                break;
-            case "Sunset at the Beach":
-                Global.startStory(context, R.string.F, R.string.F1, R.string.F2, R.string.F3);
-                break;
-            case "Breathing":
-                Global.startStory(context, R.string.G, R.string.G1, R.string.G2, R.string.G3);
-                break;
-            case "Animal Tools":
-                Global.startStory(context, R.string.H, R.string.H1, R.string.H2, R.string.H3);
-                break;
-            case "The Sukkah Next Door":
-                Global.startStory(context, R.string.I, R.string.I1, R.string.I2, R.string.I3);
-                break;
-            case "Helen Keller":
-                Global.startStory(context, R.string.J, R.string.J1, R.string.J2, R.string.J3);
-                break;
-            case "Sloths and Monkeys":
-                Global.startStory(context, R.string.K, R.string.K1, R.string.K2, R.string.K3);
-                break;
-            case "Changing Bedtime":
-                Global.startStory(context, R.string.L, R.string.L1, R.string.L2, R.string.L3);
-                break;
             case "Coyotes and Wolves":
                 Global.startStory(context, R.string.M, R.string.M1, R.string.M2, R.string.M3);
                 break;
@@ -234,9 +162,6 @@ public class Global{
                 break;
             case "Government":
                 Global.startStory(context, R.string.Q, R.string.Q1, R.string.Q2, R.string.Q3);
-                break;
-            case "Digital Music Recording":
-                Global.startStory(context, R.string.R, R.string.R1, R.string.R2, R.string.R3);
                 break;
         }
     }

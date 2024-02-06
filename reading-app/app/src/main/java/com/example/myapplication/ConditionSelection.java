@@ -49,7 +49,7 @@ public class ConditionSelection extends AppCompatActivity implements TCPClientOw
         start = findViewById(R.id.finish);
         start.setOnClickListener(this);
 
-        List<String> spinnerItems = Arrays.asList("Pick a Story!", getString(R.string.A), getString(R.string.B), getString(R.string.C), getString(R.string.D), getString(R.string.E), getString(R.string.F), getString(R.string.G), getString(R.string.H), getString(R.string.I), getString(R.string.J), getString(R.string.K), getString(R.string.L), getString(R.string.M), getString(R.string.N), getString(R.string.O), getString(R.string.P), getString(R.string.Q), getString(R.string.R));
+        List<String> spinnerItems = Arrays.asList("Pick a Story!", getString(R.string.M), getString(R.string.N), getString(R.string.O), getString(R.string.P), getString(R.string.Q));
         boolean[] selectedOptions = new boolean[spinnerItems.size()];
         spinnerMenu = findViewById(R.id.spinnerMenu);
         ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, spinnerItems);
@@ -85,6 +85,10 @@ public class ConditionSelection extends AppCompatActivity implements TCPClientOw
         });
 
     }
+
+    /* checking whether robot or human button was selected, and either letting the
+        raspberry pi pick the stories or opening up our story selection menu 
+        respectively */
     public void onClick(View v) {
 
         if (v.getId() == R.id.Robot) {
@@ -121,6 +125,8 @@ public class ConditionSelection extends AppCompatActivity implements TCPClientOw
             Global.startHumanCondition(ConditionSelection.this, firststory);
         }
     }
+
+    //functions for enabling talking with raspberry pi:
 
     @Override
     public void messageReceived(String message) {
