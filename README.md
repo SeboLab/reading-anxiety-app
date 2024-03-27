@@ -35,7 +35,7 @@ Instructions for everything that we used to run the reading anxiety user study
          
          rosrun misty_reading correction_manager.py <storyno1> <storyno2>
          
-      *Once all this is setup, you'll have gone into a different page that will make you pick human vs robot condition! For human condition select the correct stories, and for robot you don't have to do anything beyond click on the button*
+      *Once all this is setup, you'll have gone into a different page on your tablet that will make you pick human vs robot condition! For human condition select the correct stories, and for robot you don't have to do anything beyond click on the button*
     
       5. **To connect to the trascription script**
          
