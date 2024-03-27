@@ -51,3 +51,6 @@ Instructions for everything that we used to run the reading anxiety user study
  
    * Open strava and connect heartrate monitor
    * Open anydesk on both the tablets and click on the windows on one of the boxes and then a pop up should appear on the other tablet with an Accept button! This should connect your two tablets!! (keep bluetooth on) 
+
+3. Processing Raw data:
+   * Find the pdf [here!](https://uchicago.box.com/s/4xvu8daqsuppwudu9zcrsltmtwq56nlo)
